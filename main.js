@@ -15,6 +15,7 @@ let currentPopCount = 0
 let gameLength = 5000
 let clockId = 0
 let timeRemaining = 0
+let currentPlayer = {}
 
 function startGame(){
 
@@ -64,7 +65,7 @@ function draw(){
   
   clickCountElem.innerText = clickCount.toString()
   popCountElem.innerText = currentPopCount.toString()
-  highPopCountElem.innerText = highestPopCount.toString()
+  highPopCountElem.innerText = currentPlayer.topScore.toString()
 }
 
 function stopGame(){
@@ -77,8 +78,9 @@ function stopGame(){
   height = 120
   width = 100
 
-  if(currentPopCount > highestPopCount){
-    highestPopCount = currentPopCount
+  if(currentPopCount > currentPlayer.topScore){
+    currentPlayer.topScore = currentPopCount
+    savePlayers()
   }
 
   currentPopCount = 0
@@ -98,7 +100,7 @@ function setPlayer(event){
 
   let playerName = form.playerName.value
 
-  let currentPlayer = players.find(player => player.name == playerName)
+  currentPlayer = players.find(player => player.name == playerName)
 
   if(!currentPlayer){
     currentPlayer = {name: playerName, topScore: 0}
@@ -106,9 +108,10 @@ function setPlayer(event){
     savePlayers()
   }
 
-  console.log(currentPlayer)
-
   form.reset()
+  document.getElementById("game").classList.remove("hidden")
+  form.classList.add("hidden")
+  draw()
 }
 
 function savePlayers(){

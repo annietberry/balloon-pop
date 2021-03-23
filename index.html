@@ -2,8 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" 
-    content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balloon Pop</title>
     <link rel="stylesheet" href="style.css">
@@ -12,38 +11,40 @@
 <body>
 
     <form onsubmit="setPlayer(event)">
-        <div> 
+        <div>
             <label for="name">Player Name:</label>
-            <input type="text" name="playerName" required >
+            <input type="text" name="playerName" required>
         </div>
         <button type="submit">Ok</button>
     </form>
 
-    <div>
-        <button id="start-button" onclick="startGame()">START GAME</button>
-    </div>
+    <section id="game" class="game hidden">
+        <div>
+            <button id="start-button" onclick="startGame()">START GAME</button>
+        </div>
 
-    <Button id="inflate-button" onclick="inflate()" disabled="true">
-        Inflate
-        <span id="click-count"></span>
-    </Button>
+        <Button id="inflate-button" onclick="inflate()" disabled="true">
+            Inflate
+            <span id="click-count"></span>
+        </Button>
 
-    <div>
-      <span>Balloons Popped:</span>
-      <span id="pop-count">0</span>
-    </div>
-    <div>
-        <span>Top Popped:</span>
-        <span id="high-pop-count">0</span>
-      </div>
-    <div>
-        <span>Time Remaining:</span>
-        <span id="countdown">0</span>
-    </div>
+        <div>
+            <span>Balloons Popped:</span>
+            <span id="pop-count">0</span>
+        </div>
+        <div>
+            <span>Top Popped:</span>
+            <span id="high-pop-count">0</span>
+        </div>
+        <div>
+            <span>Time Remaining:</span>
+            <span id="countdown">0</span>
+        </div>
 
-    <div id="balloon"class="balloon" ></div>
+        <div id="balloon" class="balloon"></div>
+    </section>
 
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
