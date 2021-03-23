@@ -1,5 +1,20 @@
+:root{
+    --primary:#f39fd;
+    --bg: rgb(224, 217, 217); 
+    --shadow: 2px 0 8px rgba(0,0,0,0.3);
+    --corners: 4px;
+}
+
 body{
-    background-color:wheat;
+    background-color:var(--bg);
+}
+
+header{
+    margin: 3em 0;
+}
+
+img{
+    max-width: 100%;
 }
 
 .balloon{
@@ -9,6 +24,23 @@ body{
     border-radius:50%;
 }
 
+.container{
+    width: 50%;
+    margin: auto;
+}
+
+.card{
+    background-color:white;
+    padding: 1em;
+    box-shadow: var(--shadow);
+    border-radius: var(--corners);
+}
+
+.shadow{
+    filter: drop-shadow(var(--shadow));
+}
+
+
 .hidden{
-    display: none;
+    display: none !important;
 }
