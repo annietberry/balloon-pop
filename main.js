@@ -90,6 +90,7 @@ function stopGame(){
 //#endregion
 
 let players = []
+loadPlayers()
 
 function setPlayer(event){
   event.preventDefault()
@@ -101,6 +102,8 @@ function setPlayer(event){
 
   if(!currentPlayer){
     currentPlayer = {name: playerName, topScore: 0}
+    players.push(currentPlayer)
+    savePlayers()
   }
 
   console.log(currentPlayer)
