@@ -1,12 +1,18 @@
 :root{
-    --primary:#f39fd;
+    --primary: rgb(243, 147, 253, 1);
+    --primary-dark: rgb(215, 120, 255, 1);
     --bg: rgb(224, 217, 217); 
     --shadow: 2px 0 8px rgba(0,0,0,0.3);
     --corners: 4px;
+    --text-color: rgb(26, 24, 24);
+    --light: rgb(253, 253, 253);
 }
 
 body{
     background-color:var(--bg);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16pt;
+    color: var(--text-color);
 }
 
 header{
@@ -17,11 +23,27 @@ img{
     max-width: 100%;
 }
 
+button{
+    background-color:var(--primary);
+    color: var(--light);
+    border: 1px solid var(--primary-dark);
+    border-radius: var(--corners);
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--primary-dark);
+}
+
 .balloon{
     height:120px;
     width:100px;
     background-color:blue;
     border-radius:50%;
+    transition: all .2s ease;
 }
 
 .container{
@@ -30,7 +52,7 @@ img{
 }
 
 .card{
-    background-color:white;
+    background-color:var(--light);
     padding: 1em;
     box-shadow: var(--shadow);
     border-radius: var(--corners);
@@ -38,6 +60,14 @@ img{
 
 .shadow{
     filter: drop-shadow(var(--shadow));
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-flex.space-between{
+    justify-content: space-between;
 }
 
 
