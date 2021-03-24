@@ -98,6 +98,7 @@ button:hover{
 
 .d-flex{
     display: flex;
+    align-items:center;
 }
 
 .d-flex.space-between{
