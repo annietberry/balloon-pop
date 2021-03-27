@@ -58,6 +58,7 @@ button:hover{
     height: 130px;
     width: 180px;
     position: relative;
+    align-self: flex-end;
 }
 
 
@@ -112,6 +113,20 @@ button:hover{
     background-color:blue;
     border-radius:50%;
     transition: all .05s linear;
+    animation: balloon-float 5s ease-in-out infinite;
+    align-self: flex-end;
+    margin: 0 auto;
+    box-shadow: inset -10px -10px 12px rgba(0,0,0,0.3);
+}
+
+@keyframes balloon-float{
+    0%, 100% {
+        transform: translateY(-25px) rotate(5deg);
+
+    }
+    50% {
+        transform: translateY(0px)  rotate(-5deg);
+    }
 }
 
 .container{
