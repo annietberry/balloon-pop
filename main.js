@@ -63,7 +63,7 @@ function draw(){
   
   clickCountElem.innerText = clickCount.toString()
   popCountElem.innerText = currentPopCount.toString()
-  highPopCountElem.innerText = currentPlayer.topScore.toString()
+  highPopCountElem.innerText = currentPlayer.topScore
 
   playerNameElem.innerText = currentPlayer.name
 }
