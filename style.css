@@ -95,6 +95,15 @@ button:hover{
     border-top-left-radius: 20px;
     z-index: 2;
     position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    user-select: none;
+}
+
+.pump-box span{
+    background-color:antiquewhite;
+    padding: .5 em;
 }
 
 .balloon{
