@@ -106,6 +106,7 @@ function stopGame(){
 
   stopClock()
   draw()
+  drawScoreboard()
   
 }
 //#endregion
@@ -131,6 +132,7 @@ function setPlayer(event){
   document.getElementById("game").classList.remove("hidden")
   form.classList.add("hidden")
   draw()
+  drawScoreboard()
 }
 
 function changePlayer(){
@@ -148,3 +150,22 @@ function loadPlayers(){
     players = playersData
   }
 }
+
+function drawScoreboard(){
+  let template = ""
+  players.forEach(player => {
+    template += `
+    <div class="d-flex space-between">
+            <span>
+                <i class="fa fa-user"></i>
+                ${player.name}
+            </span>
+            <span>score: ${player.topScore}</span>
+        </div>
+    `
+  })
+
+  document.getElementById("players").innerHTML = template
+}
+
+drawScoreboard()
