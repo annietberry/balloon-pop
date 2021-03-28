@@ -20,8 +20,8 @@
     </header>
 
     <main class="container card">
-<!-- TODO remove hidden -->
-    <form class="d-flex space-between hidden" id="player-form" onsubmit="setPlayer(event)">
+
+    <form class="d-flex space-between" id="player-form" onsubmit="setPlayer(event)">
         <div>
             <label for="name">
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
@@ -32,8 +32,8 @@
         <button type="submit">Ok</button>
     </form>
     
-    <!-- TODO REPLACE HIDDEN CLASS -->
-    <section id="game" class="game">
+    
+    <section id="game" class="game hidden">
 
         <div class="card bg-dark text-light">
             <div class="d-flex space-between">
@@ -48,14 +48,14 @@
                 
             </div>
         </div>
-        <!-- TODO remove hidden class -->
-        <div id="main-controls" class="d-flex space-around mt-2 hidden">
+        
+        <div id="main-controls" class="d-flex space-around mt-2">
             <button class="btn-dark" onclick="changePlayer()">Change Player</button>
             <button id="start-button" onclick="startGame()">START GAME</button>
         </div>
 
-        <!-- TODO replace hidden class -->
-        <div id="game-controls">
+        
+        <div id="game-controls" class="hidden">
 
         <div>
             <span>Balloons Popped:</span>
